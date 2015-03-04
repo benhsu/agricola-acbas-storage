@@ -2,9 +2,9 @@ wall=2;
 
 module player() {
 		difference() {
-				cube([44, 44, 30]);
+				cube([44, 44, 32]);
 				translate([wall,wall,wall]) {
-						cube([40,40,29]);
+						cube([40,40,31]);
 				}
 		}
 }

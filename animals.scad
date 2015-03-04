@@ -5,7 +5,7 @@ use<notch.scad>
 module animals() {
 		difference() {
 
-				cube([129, 103, 27]);
+				cube([129, 103, 29]);
 				translate([wall, wall, wall]) {
 						cube([60, 54, 28]);
 				}
