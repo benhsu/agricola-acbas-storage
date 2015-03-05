@@ -1,5 +1,13 @@
 # agricola-acbas-storage
 
+How to use
+----------
+
+1. Install OpenSCAD ( http://openscad.org )
+2. Open up umbrella.scad to see how the pieces fit together
+3. Open up animals.scad, expansions.scad, player.scad, rest.scad, "Compile and Render" each file with F6 then export as STL
+4. Open up STL in your printer software (I use Cura)
+
 We are going to have 5 components: a tray for the animals, a tray for the extension tiles, two trays for player components (each of these will hold 9 borders and 3 disks), and a tray for everything else. The last tray will hold: the other 8 borders, base tile games such as the Stall and the Half Timbered House, the houses, reed, stone, and wood.
 
 Some base numbers:
