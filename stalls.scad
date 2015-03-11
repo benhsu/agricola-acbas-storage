@@ -26,6 +26,6 @@ module stalls_and_borders() {
 		}
 }
 
-translate([0, 193 - 42 - wall - wall, 0]) {
-				stalls_and_borders();
-}
+// translate([0, 193 - 42 - wall - wall, 0]) {
+// }
+stalls_and_borders();

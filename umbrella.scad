@@ -2,7 +2,8 @@
 use<animals.scad>
 use<expansions.scad>
 use<player.scad>
-use<rest.scad>
+use<resources.scad>
+use<stalls.scad>
 
 animals();
 
