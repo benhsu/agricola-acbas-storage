@@ -1,42 +1,31 @@
-wall = 2;
+wall = 1.2;
 use <notch.scad>;
-module rest() {
+
+module stalls_and_borders() {
+		// boxes to hold the stalls, base buildings, and borders
 		difference() {
-
-				cube([63, 193, 35]);
+				cube([63, 42 + 2*wall, 35]);
 				translate([wall, wall, wall]) {
-						cube([59, 36, 34]);
+						cube([40, 42, 34]);
 				}
 
-				translate([wall, 2 * wall + 36 , wall]) {
-						cube([59, 35, 34]);
+				translate([2 * wall + 40, wall, wall]) {
+						cube([63 - wall - wall - wall - 40, 42, 34]);
 				}
 
-				translate([wall, 3 * wall + 36 + 35 , wall]) {
-						cube([59, 35, 34]);
-				}
-
-				translate([wall, 4 * wall + 36 + 35 + 35 , wall]) {
-						cube([59, 35, 34]);
-				}
-
-				translate([wall, 5 * wall + 36 + 35 + 35 + 35, wall]) {
-						cube([40, 40, 34]);
-				}
-
-				translate([2 * wall + 40, 5 * wall + 36 + 35 + 35 + 35, wall]) {
-						cube([17, 40, 34]);
-				}
-
-				translate([1.5 * wall, 164, wall]) {
+				translate([1.5 * wall, 21 + wall - 7, wall]) {
 						rotate([0, 0, 90]) {
 								notch(30, 14, 38 - wall, 3* wall);
 						}
 				}
-				translate([1.5 * wall +  61, 164, wall]) {
+				translate([1.5 * wall+ 63, 21 + wall - 7, wall]) {
 						rotate([0, 0, 90]) {
 								notch(30, 14, 38 - wall, 3* wall);
 						}
 				}
 		}
+}
+
+translate([0, 193 - 42 - wall - wall, 0]) {
+				stalls_and_borders();
 }

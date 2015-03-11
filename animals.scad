@@ -18,7 +18,7 @@ module animals() {
 						cube([64.6, 44.6, 38]);
 				}
 				translate([2*wall + 60, wall , floor]) {
-						cube([64.6, 55.6, 38]);
+						cube([64.6, 54, 38]);
 				}
 		}
 }

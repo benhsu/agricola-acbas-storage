@@ -14,11 +14,15 @@ translate([84 + 1, 104 + 1, 0]) {
 		player();
 }
 
-translate([84 + 1, 104 + 1 + 44 , 0]) {
+translate([84 + 1, 104 + 1 + 44 + 1 , 0]) {
 		player();
 }
 
 
 translate([84 + 44 + 1 + 1, 0, 0]) {
-		rest();
+		resources();
+}
+
+translate([84 + 44 + 1 + 1, 150 + 1, 0]) {
+		stalls_and_borders();
 }
