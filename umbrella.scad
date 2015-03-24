@@ -12,12 +12,12 @@ use<stalls.scad>
 // 2 layers = 5mm
 // put this at the bottom to make coding easier
 // in actuality it will go at the top
-#cube([193, 193, 10]);
+%cube([193, 193, 10]);
 
 translate([0,0, 10]) {
-		animals();
+		%animals();
 
-		translate([104, 104, 0]) {
+		%translate([104, 104, 0]) {
 				expansions();
 		}
 
@@ -29,13 +29,13 @@ translate([0,0, 10]) {
 		 		player();
 		}
 
-		translate([129 + 1, 42 +  1.2 + 1.2 + 1 + 29, 0]) {
+		translate([129 + 1, 42 +  1.2 + 1.2 + 1 + 1 + 28.5, 0]) {
 		 		player();
 		}
 
 
 
-		translate([0, 104, 0]) {
+		%translate([0, 104, 0]) {
 				resources();
 		}
 
