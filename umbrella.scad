@@ -15,9 +15,9 @@ use<stalls.scad>
 %cube([193, 193, 10]);
 
 translate([0,0, 10]) {
-		%animals();
+		animals();
 
-		%translate([104, 104, 0]) {
+		translate([104, 104, 0]) {
 				expansions();
 		}
 
@@ -35,7 +35,7 @@ translate([0,0, 10]) {
 
 
 
-		%translate([0, 104, 0]) {
+		translate([0, 104, 0]) {
 				resources();
 		}
 
