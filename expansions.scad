@@ -1,45 +1,44 @@
-wall = 2;
-
+include<constants.scad>;
 use<notch.scad>;
 
 module expansions() {
 
 		difference() {
 
-				cube([89, 89, 35]);
+				// magic number 54 is how many tiles this holds
+				cube([44, 135, 36]); // 33 ~= 38 * .866 * + a bit for slack
 				translate([wall, wall, wall]) {
-						cube([42, 42, 35]);
+						// this is a cube with a "wedge" taken out of it
+						// we subtract THAT from the outer cube
+						// (so double subtract=add the wedge back in)  to make
+						// the wedge
+						difference() {
+								cube([40, 131, 36]);
+								translate([wall, wall + 1 + (2 * 54), wall]) {
+												rotate([0,90,0]) {
+														linear_extrude(height=40) {
+																polygon(points=[[0,0], [0,20], [-38 * sq_32,20]]);
+														}
+												}
+								}
+						}
 				}
 
-				translate([wall, 2*wall + 42, wall]) {
-						cube([42, 42, 35]);
+
+		}
+
+		%translate([wall, wall + 1, wall]) {
+				for ( i = [0: 54]) {
+						translate([0, 2*i, 0]) {
+								rotate(a = [60, 0, 0]) {
+ 										cube([38, 38, 2]);
+								}
+						}
 				}
-
-				translate([2*wall + 42, wall, wall]) {
-						cube([42, 42, 35]);
-				}
-
-				translate([2* wall + 42, 2*wall + 42, wall]) {
-						cube([42, 42, 35]);
-				}
-
-				// // TODO look at polytopes and make the diagonal notches
-				// translate([-wall,-wall, wall]) {
-				// 		cube([25, 25, 35]);
-				// }
-
-
 
 		}
 
 }
 
-// color("SeaGreen") {
-
-// 				translate([89-wall - 13 ,89 -wall -13, wall]) {
-// 						cube([25, 25, 35]);
-// 				}
-
-// 				}
 
 expansions();
