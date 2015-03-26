@@ -14,7 +14,7 @@ module expansions() {
 						// the wedge
 						difference() {
 								cube([40, 131, 36]);
-								translate([wall, wall + 1 + (2 * 54), wall]) {
+								translate([0, wall + 1 + (2 * 54), wall]) {
 												rotate([0,90,0]) {
 														linear_extrude(height=40) {
 																polygon(points=[[0,0], [0,20], [-38 * sq_32,20]]);

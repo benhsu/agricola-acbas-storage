@@ -1,24 +1,21 @@
-wall = 1.2;
-
-floor = 20;
-
+include<constants.scad>;
 use<notch.scad>;
 
 module resources() {
 		difference() {
 
-				cube([104, 89, 35]);
+				cube([117, 89, 35]);
 				translate([wall, wall, floor]) {
-						cube([60,   50, 39]);
+						cube([60, 45, 39]);
 				}
-				translate([wall, 2*wall + 50, floor]) {
-						cube([60,   35.4, 39]);
+				translate([wall, 2*wall + 45, floor]) {
+						cube([60, 38, 39]);
 				}
-				translate([2*wall + 60, 2*wall + 50, floor]) {
-						cube([40.4, 35.4, 39]);
+				translate([2*wall + 60, 2*wall + 45, floor]) {
+						cube([51, 38, 39]);
 				}
 				translate([2*wall + 60, wall , floor]) {
-						cube([40.4, 50, 39]);
+						cube([51, 45, 39]);
 				}
 		}
 }

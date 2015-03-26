@@ -15,27 +15,26 @@ use<stalls.scad>
 %cube([193, 193, 10]);
 
 translate([0,0, 10]) {
-		animals();
 
-		translate([104, 104, 0]) {
-				expansions();
-		}
+		expansions();
 
-		translate([129 + 1, 0, 0]) {
+		translate([0, 135 + 1, 0]) {
 				stalls_and_borders();
 		}
 
-		translate([129 + 1, 42 +  1.2 + 1.2 + 1, 0]) {
+		translate([44+1, 0, 0]) {
+				animals();
+		}
+
+		translate([44 + 1, 103 + 1, 0]) {
 		 		player();
 		}
 
-		translate([129 + 1, 42 +  1.2 + 1.2 + 1 + 1 + 28.5, 0]) {
+		translate([44 + 1, 103 + 1 + 44 + 1, 0]) {
 		 		player();
 		}
 
-
-
-		translate([0, 104, 0]) {
+		translate([44 + 1 + 30 + 1, 103 + 1, 0]) {
 				resources();
 		}
 
