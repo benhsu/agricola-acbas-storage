@@ -38,7 +38,7 @@ player.scad
 
 Defines the tray for storing the player disks, 9 borders, and the starting player token
 
-rest.scad
+stalls.scad
 ---------
 
 Defines the tray to store everything else.

@@ -5,16 +5,16 @@ module animals() {
 		difference() {
 
 				cube([148, 103, 36]);
-				translate([wall, wall, wall]) {
+				translate([wall, wall, floor]) {
 						cube([65, 54, 39]);
 				}
-				translate([wall, 2*wall + 54, wall]) {
+				translate([wall, 2*wall + 54, floor]) {
 						cube([65, 43, 39]);
 				}
-				translate([2*wall + 65, 2*wall + 54, wall]) {
+				translate([2*wall + 65, 2*wall + 54, floor]) {
 						cube([77, 43, 39]);
 				}
-				translate([2*wall + 65, wall , wall]) {
+				translate([2*wall + 65, wall , floor]) {
 						cube([77, 54, 39]);
 				}
 				// make inner walls shorter than outer walls to fit scorepad in

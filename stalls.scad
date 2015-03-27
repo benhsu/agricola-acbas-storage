@@ -6,10 +6,10 @@ module stalls_and_borders() {
 		difference() {
 
 				cube([44, 57, 36]); // 33 ~= 38 * .866 * + a bit for slack
-				translate([wall, wall, wall]) {
+				translate([wall, wall, floor]) {
 						// outline for the 10 tiles this will hold
 						// 19 = 38 * cos(60)
-						%translate([wall, wall + 20, wall]) {
+						%translate([wall, wall + 20, floor]) {
 								for ( i = [0: 10]) {
 										translate([0, 2*i, 0]) {
 												rotate(a = [120, 0, 0]) {
